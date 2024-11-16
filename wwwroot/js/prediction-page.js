@@ -13,3 +13,36 @@ districtSelector.addEventListener('change', function() {
     // Construct the new image source based on the district name
     mapImage.src = `images/ankara-${districtName}.png`;
 });
+
+$(document).ready(function () {
+    $("#PredictButton").click(function (event) {
+        event.preventDefault();
+
+        var formData = {
+            Area: $("#AreaTextBox").val(),
+            HouseType: $("#HouseTypeTextBox").val(),
+            Location: $("#LocationTextBox").val(),
+            Floor: $("#FloorTextBox").val(),
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "/PredictionPage/Predict",
+            data: JSON.stringify(formData),
+            dataType: "json",
+            contentType: "application/json",
+            success: function (response) {
+                if (response.success) {
+
+                }
+                else {
+                    alert("Tahmin süreci esnasında bir hata oluştu.");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log("Error details:", xhr, status, error);
+                alert("Sunucu ile iletişim kurulurken bir hata oluştu.");
+            }
+        });
+    });
+});

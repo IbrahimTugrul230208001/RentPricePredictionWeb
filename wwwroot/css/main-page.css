@@ -1,0 +1,121 @@
+html, body
+ {  margin: 0; 
+    padding: 0;
+    width: 100%; 
+    height: 3000px; 
+    box-sizing: border-box; 
+    background-color: rgb(33, 33, 33);
+}
+    
+.title-div{
+    border-bottom: 1px solid #ECECEC;
+    height: 80px;
+    align-content: center;
+}
+.title{
+    color:#ECECEC;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+.Typewriter__cursor.stopped {
+    animation: none; /* Stop the cursor blink */
+    opacity: 1; /* Keeps the cursor visible */
+      
+}
+ 
+.typewriter{
+    color:#ECECEC;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18;
+}
+
+
+#typewriter-container{
+    width: 40%;
+    position: relative;
+    left:5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.houses-image{
+      opacity: 0.7; /* Adjust opacity to soften the image */
+      width:100%;
+}
+
+.houses-image-container{
+    width:50%;
+    position: relative;
+    left: 2.5%;
+}
+
+.upper-container{
+    display:flex;
+    position: relative;
+    top:50px;
+}
+
+
+.predict-button{
+    color:rgb(33,33,33);
+    background-color: #ECECEC;
+    border: 0;
+    width: 100%;
+    height: 50px;
+    font-weight: 500;
+    font-size: 20;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin-top:20px;
+}
+
+.predict-button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transition:0.1s;
+}
+
+.predict-button:active{
+    opacity: 0.6;
+}
+
+.middle-container{
+    margin-top:200px;
+}
+
+
+.images{
+    width:100%;
+}
+
+.image-container{
+    width:90%;
+    position:relative;
+    top:50px;
+    left:5%;
+    margin-top:100px;
+    display:flex;
+  }
+  .image-area-house-type{
+      width:100%;
+  }
+.visualizations-title{
+    color:#ECECEC;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 50;
+   }
+
+.visualizations-title-container{
+    margin-bottom:50px;
+}
+
+#price-distro{
+   width:70%;
+}
+.visualizations-text-container{
+    width:30%;
+    margin-left:5%;
+}

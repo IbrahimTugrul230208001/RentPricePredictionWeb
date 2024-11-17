@@ -1,4 +1,3 @@
-// Get the district selector dropdown and the image element
 const districtSelector = document.getElementById('district-selector');
 const mapImage = document.querySelector('.ankara-map');
 

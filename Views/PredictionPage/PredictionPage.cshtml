@@ -17,9 +17,9 @@
         </div>
         <div class="prediction-container">
             <div class="ankara-map-container">
-                <img class="ankara-map" src="images/ankara-blank.png">
+                <img class="ankara-map" src="~/Images/ankara-blank.png">
             </div>
-            <form method="POST" action="Prediction">
+            <form method="post" action="Predict">
                 <div class="comboboxes-textboxes">
                     <select class="LocationComboBox" id="district-selector">
                         <option value="" disabled selected>Bölge Seçiniz</option>
@@ -386,7 +386,7 @@
                         <option value="Kot 3">Kot 3 (-3. Kat)</option>
                         <option value="Yüksek Giriş">Yüksek Giriş</option>
                     </select>
-                    <button type="submit" class="predict-button">Fiyat Tahmini Yap</button>
+                    <button type="submit" id="PredictButton" class="predict-button">Fiyat Tahmini Yap</button>
                     <p class="prediction-result">Tahmin Edilen Fiyat: </p>
                 </div>
             </form>
@@ -394,6 +394,7 @@
 
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="~/js/prediction-page.js"></script>
 </body>

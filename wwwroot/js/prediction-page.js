@@ -3,21 +3,18 @@ const mapImage = document.querySelector('.ankara-map');
 
 // Event listener for dropdown selection
 districtSelector.addEventListener('change', function() {
-    // Get the selected district from the dropdown (e.g., "Akyurt - Yıldırım Mh.")
     const selectedDistrict = districtSelector.value;
 
-    // Extract only the district name (the part before the first hyphen)
     const districtName = selectedDistrict.split(' -')[0].toLowerCase(); // Keeps the district name as it is
     
-    // Construct the new image source based on the district name
-    mapImage.src = `images/ankara-${districtName}.png`;
+    mapImage.src = `/Images/ankara-${districtName}.png`;
 });
 
-$(document).ready(function () {
-    $("#PredictButton").click(function (event) {
+$(document).ready( function () {
+    $("#PredictButton").click( function (event) {
         event.preventDefault();
 
-
+        // Collect user input
         var formData = {
             Area: $(".AreaTextBox").val(),
             HouseType: $(".HouseTypeComboBox").val(),
@@ -25,6 +22,7 @@ $(document).ready(function () {
             Floor: $(".FloorComboBox").val(),
         };
 
+        // Send AJAX request
         $.ajax({
             type: "POST",
             url: "/PredictionPage/Predict",
@@ -34,13 +32,12 @@ $(document).ready(function () {
             success: function (response) {
                 if (response.success) {
                     $(".prediction-result").text("Tahmin Edilen Fiyat: " + response.prediction);
-                }
-                else {
+                } else {
                     alert("Tahmin süreci esnasında bir hata oluştu.");
                 }
             },
             error: function (xhr, status, error) {
-                console.log("Error details:", xhr, status, error);
+                console.error("Error details:", xhr, status, error);
                 alert("Sunucu ile iletişim kurulurken bir hata oluştu.");
             }
         });

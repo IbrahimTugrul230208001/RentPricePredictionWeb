@@ -18,11 +18,12 @@ $(document).ready(function () {
     $("#PredictButton").click(function (event) {
         event.preventDefault();
 
+
         var formData = {
-            Area: $("#AreaTextBox").val(),
-            HouseType: $("#HouseTypeTextBox").val(),
-            Location: $("#LocationTextBox").val(),
-            Floor: $("#FloorTextBox").val(),
+            Area: $(".AreaTextBox").val(),
+            HouseType: $(".HouseTypeComboBox").val(),
+            Location: $(".LocationComboBox").val(),
+            Floor: $(".FloorComboBox").val(),
         };
 
         $.ajax({
@@ -33,7 +34,7 @@ $(document).ready(function () {
             contentType: "application/json",
             success: function (response) {
                 if (response.success) {
-
+                    $(".prediction-result").text("Tahmin Edilen Fiyat: " + response.prediction);
                 }
                 else {
                     alert("Tahmin süreci esnasında bir hata oluştu.");

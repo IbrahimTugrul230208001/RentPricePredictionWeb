@@ -21,7 +21,7 @@
             </div>
             <form method="POST" action="Prediction">
                 <div class="comboboxes-textboxes">
-                    <select name="district" id="district-selector">
+                    <select class="LocationComboBox" id="district-selector">
                         <option value="" disabled selected>Bölge Seçiniz</option>
                         <option value="Akyurt - Yıldırım Mh.">Akyurt - Yıldırım Mh.</option>
                         <option value="Altındağ - Yıldıztepe Mh.">Altındağ - Yıldıztepe Mh.</option>
@@ -336,7 +336,7 @@
                         <option value="Yenimahalle - Yunus Emre Mh.">Yenimahalle - Yunus Emre Mh.</option>
                     </select>
 
-                    <select name="house_type" id="district-selector">
+                    <select class="HouseTypeComboBox" name="house_type" id="district-selector">
                         <option value="" disabled selected>Ev Tipi Seçiniz</option>
                         <option value="1+1">1+1</option>
                         <option value="2+1">2+1</option>
@@ -350,8 +350,8 @@
                         <option value="5+2">5+2</option>
                     </select>
 
-                    <input type="number" id="area-input" placeholder="Alan Büyüklüğünü Giriniz (m²)" min="50" max="500" required>
-                    <select name="floor" id="district-selector">
+                    <input type="number" class="AreaTextBox" id="area-input" placeholder="Alan Büyüklüğünü Giriniz (m²)" min="50" max="500" required>
+                    <select class="FloorComboBox" name="floor" id="district-selector">
                         <option value="" disabled selected>Kat Tipi Seçiniz</option>
                         <option value="1">1. Kat</option>
                         <option value="2">2. Kat</option>
